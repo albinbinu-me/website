@@ -60,6 +60,19 @@ const HorologyShowcase = () => {
     const appliedRotateX = isMobile ? 0 : rotateX;
     const appliedRotateY = isMobile ? 0 : rotateY;
 
+    // --- CRITICAL FIX FOR REACT ERROR #300 ---
+    // Extracting useTransform hooks to strictly the top level so they 
+    // are called universally on every render, preventing hook count 
+    // mismatch bugs when 'isMobile' state conditionally hides elements.
+    const ambientGlowX = useTransform(mouseXSpring, [-0.5, 0.5], ["-60px", "60px"]);
+    const ambientGlowY = useTransform(mouseYSpring, [-0.5, 0.5], ["-60px", "60px"]);
+
+    const glareOffsetX = useTransform(mouseXSpring, [-0.5, 0.5], ["-80%", "80%"]);
+    const glareOffsetY = useTransform(mouseYSpring, [-0.5, 0.5], ["-80%", "80%"]);
+
+    const imageOffsetX = useTransform(mouseXSpring, [-0.5, 0.5], ["3%", "-3%"]);
+    const imageOffsetY = useTransform(mouseYSpring, [-0.5, 0.5], ["3%", "-3%"]);
+
     return (
         <section 
             id="horology"
@@ -88,8 +101,8 @@ const HorologyShowcase = () => {
                 <motion.div 
                     className="absolute z-0 w-[400px] h-[400px] rounded-full bg-champagne-gold/15 blur-[100px] pointer-events-none mix-blend-screen"
                     style={{
-                        x: useTransform(mouseXSpring, [-0.5, 0.5], ["-60px", "60px"]),
-                        y: useTransform(mouseYSpring, [-0.5, 0.5], ["-60px", "60px"]),
+                        x: ambientGlowX,
+                        y: ambientGlowY,
                     }}
                 />
             )}
@@ -147,8 +160,8 @@ const HorologyShowcase = () => {
                             <motion.div 
                                 className="absolute inset-0 z-30 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay bg-gradient-to-tr from-transparent via-white/30 to-transparent"
                                 style={{
-                                    x: useTransform(mouseXSpring, [-0.5, 0.5], ["-80%", "80%"]),
-                                    y: useTransform(mouseYSpring, [-0.5, 0.5], ["-80%", "80%"]),
+                                    x: glareOffsetX,
+                                    y: glareOffsetY,
                                 }}
                             />
                         )}
@@ -161,8 +174,8 @@ const HorologyShowcase = () => {
                             src={clockImage} 
                             alt="Timeless Horology Clock Piece" 
                             style={!isMobile ? {
-                                x: useTransform(mouseXSpring, [-0.5, 0.5], ["3%", "-3%"]),
-                                y: useTransform(mouseYSpring, [-0.5, 0.5], ["3%", "-3%"])
+                                x: imageOffsetX,
+                                y: imageOffsetY
                             } : {}}
                             className="absolute w-[110%] h-[110%] max-w-none object-cover -left-[5%] -top-[5%] group-hover:scale-105 transition-transform duration-1000 ease-out z-0"
                         />
