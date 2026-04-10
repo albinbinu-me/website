@@ -1,6 +1,6 @@
-import woodenPotImg from '../../images/products/wodden-pot.jpeg';
-import potGreyImg from '../../images/products/pot-grey.jpeg';
-import potWhiteTwoImg from '../../images/products/pot-white-two.jpeg';
+import woodenPotImg from '../../assets/products/vases/wodden-pot.jpeg';
+import potGreyImg from '../../assets/products/vases/pot-grey.jpeg';
+import potWhiteTwoImg from '../../assets/products/vases/pot-white-two.jpeg';
 
 export const vasesData = [
   {

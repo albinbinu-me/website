@@ -1,9 +1,9 @@
-import Clock1 from '../../images/products/clock-1.jpeg';
-import Clock2 from '../../images/products/clock-2.jpeg';
-import Clock3 from '../../images/products/clock-3.jpeg';
-import Clock4 from '../../images/products/clock-4.jpeg';
-import Clock5 from '../../images/products/clock-5.jpeg';
-import Clock6 from '../../images/products/clock-6.jpeg';
+import Clock1 from '../../assets/products/clocks/clock-1.jpeg';
+import Clock2 from '../../assets/products/clocks/clock-2.jpeg';
+import Clock3 from '../../assets/products/clocks/clock-3.jpeg';
+import Clock4 from '../../assets/products/clocks/clock-4.jpeg';
+import Clock5 from '../../assets/products/clocks/clock-5.jpeg';
+import Clock6 from '../../assets/products/clocks/clock-6.jpeg';
 
 export const clocksData = [
   {

@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import clockImage from '../images/products/clock-6.jpeg'; // High-end gold clock
+import clockImage from '../assets/products/clocks/clock-6.jpeg'; // High-end gold clock
 
 const HorologyShowcase = () => {
     const ref = useRef(null);

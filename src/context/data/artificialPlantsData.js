@@ -1,7 +1,7 @@
-import bushImg from '../../images/products/bush.jpeg';
-import bush2Img from '../../images/products/bush2.jpeg';
-import RedRose from '../../images/products/rose-red.jpeg';
-import PinkWhiteRose from '../../images/products/pink-white-rose.jpeg';
+import bushImg from '../../assets/products/plants/bush.jpeg';
+import bush2Img from '../../assets/products/plants/bush2.jpeg';
+import RedRose from '../../assets/products/plants/rose-red.jpeg';
+import PinkWhiteRose from '../../assets/products/plants/pink-white-rose.jpeg';
 
 export const artificialPlantsData = [
   {

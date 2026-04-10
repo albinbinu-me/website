@@ -1,5 +1,5 @@
-import buddhaImg from '../../images/products/buddha-gold-and-white.jpeg';
-import BuddhaGolden from '../../images/products/golden-buddha.jpeg';
+import buddhaImg from '../../assets/products/buddha/buddha-gold-and-white.jpeg';
+import BuddhaGolden from '../../assets/products/buddha/golden-buddha.jpeg';
 
 export const buddhaData = [
   {

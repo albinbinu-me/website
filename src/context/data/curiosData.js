@@ -1,8 +1,8 @@
-import MetalJeepVintage from '../../images/products/metal-jeep-vintage.jpeg';
-import MetalTrain from '../../images/products/metal-train.jpeg';
-import MetalJeep from '../../images/products/metal-jeep.jpeg';
-import MetalCar from '../../images/products/vintage-car-2.jpeg';
-import MetalBike from '../../images/products/Metal-Bike.jpeg';
+import MetalJeepVintage from '../../assets/products/curios/metal-jeep-vintage.jpeg';
+import MetalTrain from '../../assets/products/curios/metal-train.jpeg';
+import MetalJeep from '../../assets/products/curios/metal-jeep.jpeg';
+import MetalCar from '../../assets/products/curios/vintage-car-2.jpeg';
+import MetalBike from '../../assets/products/curios/Metal-Bike.jpeg';
 
 export const curiosData = [
   {
