@@ -3,8 +3,6 @@ import MetalTrain from '../../images/products/metal-train.jpeg';
 import MetalJeep from '../../images/products/metal-jeep.jpeg';
 import MetalCar from '../../images/products/vintage-car-2.jpeg';
 import MetalBike from '../../images/products/Metal-Bike.jpeg';
-import buddhaImg from '../../images/products/buddha-gold-and-white.jpeg';
-import BuddhaGolden from '../../images/products/golden-buddha.jpeg';
 
 export const curiosData = [
   {
@@ -41,19 +39,5 @@ export const curiosData = [
     category: "Curios",
     description: "Precision craftsmanship immortalized in metal. The exposed classic mechanics serve as a bold focal point for modern spaces.",
     image: MetalBike
-  },
-  {
-    id: "p2",
-    name: "Serenity Buddha White",
-    category: "Curios",
-    description: "A meditating silhouette defined by quiet luxury. The contrasting textures of pure white and brushed gold invite mindful exclusivity.",
-    image: buddhaImg
-  },
-  {
-    id: "p7",
-    name: "Zenith Buddha Gold",
-    category: "Curios",
-    description: "Cast in an ethereal gold finish, this serene figure radiates a profound sense of tranquility and architectural grace.",
-    image: BuddhaGolden
   }
 ];

@@ -21,6 +21,11 @@ export const CATEGORY_METADATA = [
     children: []
   },
   {
+    name: 'Buddha',
+    count: getCategoryCount('Buddha'),
+    children: []
+  },
+  {
     name: 'Clocks',
     count: getCategoryCount('Clocks'),
     children: []
