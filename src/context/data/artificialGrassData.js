@@ -1,3 +1,7 @@
+import Grass25 from '../../assets/products/artificial-grass/25mm/grass-25mm.png';
+import Grass35 from '../../assets/products/artificial-grass/35mm/grass-35mm.png';
+import Grass45 from '../../assets/products/artificial-grass/45mm/grass-45mm.png';
+
 export const artificialGrassData = [
   {
     id: "g1",
@@ -5,7 +9,7 @@ export const artificialGrassData = [
     category: "Artificial Grass",
     subCategory: "25mm Grass",
     description: "Standard 25mm thickness artificial grass suitable for basic indoor landscaping and balconies.",
-    image: "https://images.unsplash.com/photo-1558231221-125c165de34f?auto=format&fit=crop&q=80&w=800"
+    image: Grass25
   },
   {
     id: "g2",
@@ -13,7 +17,7 @@ export const artificialGrassData = [
     category: "Artificial Grass",
     subCategory: "35mm Grass",
     description: "Lush 35mm thick turf engineered for realistic garden aesthetics.",
-    image: "https://images.unsplash.com/photo-1558231221-125c165de34f?auto=format&fit=crop&q=80&w=800"
+    image: Grass35
   },
   {
     id: "g3",
@@ -21,6 +25,6 @@ export const artificialGrassData = [
     category: "Artificial Grass",
     subCategory: "45mm Grass",
     description: "Extremely dense 45mm grass profile designed for luxury flooring and heavy foot traffic.",
-    image: "https://images.unsplash.com/photo-1558231221-125c165de34f?auto=format&fit=crop&q=80&w=800"
+    image: Grass45
   }
 ];
