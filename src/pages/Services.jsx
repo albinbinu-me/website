@@ -87,13 +87,18 @@ const Services = () => {
   ];
 
   return (
-    <div className="bg-site-text min-h-screen pt-40 pb-32 overflow-hidden">
+    <div 
+      className="min-h-screen pt-40 pb-32 overflow-hidden relative"
+      style={{ 
+        background: 'linear-gradient(180deg, #F5F5F7 0%, #E8E8ED 25%, #1D1D1F 60%)' 
+      }}
+    >
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="mb-24 flex flex-col items-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-white/40 text-[10px] uppercase tracking-[0.5em] font-medium mb-6"
+            className="text-site-secondary text-[10px] uppercase tracking-[0.5em] font-medium mb-6"
           >
             Commercial Excellence
           </motion.p>
@@ -101,15 +106,15 @@ const Services = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-white font-serif text-5xl md:text-7xl tracking-tighter text-center max-w-3xl leading-tight"
+            className="text-site-text font-serif text-5xl md:text-7xl tracking-tighter text-center max-w-3xl leading-tight"
           >
-            Architectural Decor <br /> <span className="text-white/40 italic font-normal">for B2B Spaces.</span>
+            Architectural Decor <br /> <span className="text-site-secondary italic font-normal">for B2B Spaces.</span>
           </motion.h1>
           <motion.div 
             initial={{ width: 0 }}
             animate={{ width: 80 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="h-[1px] bg-white/20 mt-12" />
+            className="h-[1px] bg-site-text/10 mt-12" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
