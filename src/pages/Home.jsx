@@ -119,8 +119,14 @@ const FeaturedProductBlock = ({ product, onOpen }) => {
 /* ── Main Home Page ── */
 const Home = () => {
   const { products } = useStore();
-  const featuredProduct = products[0];
-  const gridProducts = products.slice(1, 4);
+
+  // Pick one representative product from each category for the showcase
+  const featuredProduct = products.find(p => p.category === 'Clocks');
+  const gridProducts = [
+    products.find(p => p.category === 'Artificial Plants'),
+    products.find(p => p.category === 'Curios'),
+    products.find(p => p.category === 'Vases') || products.find(p => p.category === 'Buddha'),
+  ].filter(Boolean);
 
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
@@ -164,7 +170,7 @@ const Home = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
               >
-                Latest Arrivals
+                From Our Collection
               </motion.h2>
             </div>
             <motion.div
