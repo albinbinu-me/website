@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTilt } from '../hooks/useTilt';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, Search, Heart } from 'lucide-react';
 import { useStore } from '../context/context';
 
-const ProductCard = ({ product, onClick, index = 0 }) => {
+const ProductCard = ({ product, onClick, index = 0, viewMode = 'grid' }) => {
   const { tiltStyle, handleMouseMove, handleMouseLeave } = useTilt(10);
   const storeData = useStore();
 
@@ -17,7 +17,7 @@ const ProductCard = ({ product, onClick, index = 0 }) => {
 
   return (
     <motion.div
-      className="group cursor-pointer flex flex-col bg-white rounded-2xl overflow-hidden shadow-depth-1 hover:shadow-depth-3 transition-all duration-500 ease-out"
+      className={`group cursor-pointer flex bg-white rounded-2xl overflow-hidden shadow-depth-1 hover:shadow-depth-2 transition-all duration-500 ease-out ${viewMode === 'list' ? 'flex-row h-52 md:h-60' : 'flex-col'}`}
       onClick={() => onClick(product)}
       initial={{ opacity: 0, y: 36 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -32,8 +32,8 @@ const ProductCard = ({ product, onClick, index = 0 }) => {
       onMouseLeave={handleMouseLeave}
       style={tiltStyle}
     >
-      {/* Image */}
-      <div className="relative w-full aspect-[4/5] overflow-hidden bg-site-section">
+      {/* Image Container */}
+      <div className={`relative overflow-hidden bg-site-section ${viewMode === 'list' ? 'w-52 md:w-72 flex-shrink-0' : 'w-full aspect-[4/5]'}`}>
         <img
           src={product.image}
           alt={product.name}
@@ -56,22 +56,24 @@ const ProductCard = ({ product, onClick, index = 0 }) => {
         </div>
       </div>
 
-      {/* Info */}
-      <div className="px-5 pt-4 pb-5 flex flex-col flex-grow">
-        <p className="text-site-secondary text-[11px] uppercase tracking-[0.2em] font-medium mb-1.5">
+      {/* Info Container */}
+      <div className={`px-5 py-5 flex flex-col flex-grow justify-center ${viewMode === 'list' ? 'md:px-10' : 'pt-4 pb-5'}`}>
+        <p className="text-site-secondary text-[11px] uppercase tracking-[0.2em] font-medium mb-1.5 opacity-60">
           {product.category}
         </p>
-        <h3 className="font-serif text-[17px] text-site-text mb-4 leading-snug flex-grow">
+        <h3 className="font-serif text-[18px] md:text-[20px] text-site-text mb-6 leading-snug">
           {product.name}
         </h3>
 
-        <button
-          onClick={handleConnectClick}
-          className="flex items-center justify-center gap-2 border border-stone-gray/25 text-site-text/70 hover:border-[#25D366] hover:text-[#25D366] hover:scale-[1.02] active:scale-95 transition-all duration-300 px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-medium w-full"
-        >
-          <MessageCircle className="w-3.5 h-3.5" />
-          <span>Connect Us</span>
-        </button>
+        <div className={viewMode === 'list' ? 'max-w-xs' : 'w-full mt-auto'}>
+          <button
+            onClick={handleConnectClick}
+            className="flex items-center justify-center gap-2 border border-site-text/10 text-site-text/80 hover:bg-site-text hover:text-white hover:scale-[1.02] active:scale-95 transition-all duration-300 px-6 py-3 rounded-full text-[11px] uppercase tracking-widest font-medium w-full group/btn"
+          >
+            <Search className="w-3.5 h-3.5 group-hover/btn:scale-110 transition-transform" />
+            <span>Quick View</span>
+          </button>
+        </div>
       </div>
     </motion.div>
   );
